@@ -35,3 +35,23 @@ elif 18.5 < bmi < 25:
 else:
     bmi = round(bmi)
     print(f"Your BMI is {bmi}, you are underweight.")
+
+
+# lab 3
+# 🚨 Don't change the code below 👇
+year = int(input("Which year do you want to check? "))
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print("Leap year.")
+        else:
+            print("Not leap year.")
+    else:
+        print("Leap year.")
+else:
+    print("Not leap year.")
+
