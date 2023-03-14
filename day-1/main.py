@@ -14,8 +14,8 @@ print('e.g. print("Hello " + "world")')
 print("New lines can be created with a backslash and n.")
 
 # getting input
-userName = input("What is your username: ")
-print(f"Thank you for playing our game {userName}")
+user_name = input("What is your username: ")
+print(f"Thank you for playing our game {user_name}")
 
 # lab 3 solution
 #Write your code below this line 👇
@@ -39,8 +39,7 @@ b = input("b: ")
 #Write your code below this line 👇
 
 c = a
-d = b
-a = d
+a = b
 b = c
 
 
