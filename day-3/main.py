@@ -106,3 +106,34 @@ else:
             bill += 1
             print(f"Your final bill is: ${bill}.")
     print(f"Your final bill is: ${bill}.")
+
+# lab 5
+# 🚨 Don't change the code below 👇
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+total_t = name1.lower().count("t") + name2.lower().count("t")
+total_r = name1.lower().count("r") + name2.lower().count("r")
+total_u = name1.lower().count("u") + name2.lower().count("u")
+total_e = name1.lower().count("e") + name2.lower().count("e")
+total_true = total_r + total_t + total_u + total_e
+
+total_l = name1.lower().count("l") + name2.lower().count("l")
+total_o = name1.lower().count("o") + name2.lower().count("o")
+total_v = name1.lower().count("v") + name2.lower().count("v")
+total_love = total_l + total_v +total_o + total_e
+score = str(total_true) + str(total_love)
+score = int(score)
+if score > 40 and score < 50:
+    print(f"Your score is {score}, you are alright together.")
+elif score < 10 or score > 90:
+    print(f"Your score is {score}, you go together like coke and mentos.")
+else:
+    print(f"Your score is {score}.")
+
+
+
