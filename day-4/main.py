@@ -16,3 +16,17 @@ if random_num == 1:
 else:
     print("Tails")
 
+# lab 2
+# Import the random module here
+
+# Split string method
+names_string = input("Give me everybody's names, separated by a comma. ")
+names = names_string.split(", ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+import random
+name_length = len(names)
+random_number = random.randint(0, name_length)
+payer = names[random_number]
+print(f"{payer} is going to buy the meal today!")
