@@ -32,7 +32,12 @@ for x in student_scores:
         highest_score = x
 print(f"The highest score in the class is: {highest_score}")
 
+# for loop with range
+count = 0
+for x in range(1, 101):
+    count += x
 
+print(count)
 
 
 
