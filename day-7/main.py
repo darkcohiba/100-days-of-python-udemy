@@ -19,7 +19,7 @@ print(f"Your word is:\n {display}")
 # letter = input("Guess a letter: ").lower()
 counter = 0
 word_length = len(final_word)
-print(word_length)
+# print(word_length)
 print(final_word)
 guessed_letters = []
 lives = 7
@@ -28,7 +28,7 @@ while word_length > 0:
     guessed_letters.append(letter)
     for each_letter in final_word:
         if letter == each_letter:
-            print("Right")
+            # print("Right")
             display[counter] = letter
             counter += 1
             # print(display)
@@ -39,10 +39,15 @@ while word_length > 0:
             counter += 1
     print(display)
     if display.count(letter) != 0:
+        print(f"Words you have guessed: {guessed_letters}")
         print(f"The letter {letter} was found!")
     if display.count(letter) == 0:
+        print(f"Words you have guessed: {guessed_letters}")
         print(f"The letter {letter} was not found!")
         lives -= 1
+    if display.count("_") == 0:
+        print("You Won! Congratulations")
+        word_length = 0
     if lives == 7:
         print(full_hangman_headless)
     elif lives == 6:
@@ -57,12 +62,15 @@ while word_length > 0:
         print(full_hangman_minus_two)
     elif lives ==1:
         print(full_hangman_minus_one)
+        print("One guess left!!")
     elif lives ==0:
         print("You Lost!")
         print(full_hangman)
+        print(f"Your word was {final_word}")
+        word_length = 0
     
     counter = 0
 
-print("\n")
-print("Congratulations You Won!!!")
+# print("\n")
+# print("Congratulations You Won!!!")
 # print(final_word)
