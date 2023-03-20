@@ -24,6 +24,7 @@ paint_calc(height=test_h, width=test_w, cover=coverage)
 #Write your code below this line 👇
 def prime_checker(number):
     count = 0
+    
     # while prime == True:
     if number <= 2:
         print("It's a prime number.")
