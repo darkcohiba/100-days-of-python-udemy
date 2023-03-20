@@ -1,6 +1,8 @@
 from art import *
 
 alphabet = ["a", "b", "c", "d", "e", "f", "g", "h","i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p","q","r","s","t","u","v","w","x","y","z"]
+print(welcome)
+print(title)
 direction = input("Type 'encode' to encrypt and 'decode' to decrypt: \n")
 text = input("Type your message: \n")
 shift = int(input("Type your shift number: \n"))
