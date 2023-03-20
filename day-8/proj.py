@@ -1,26 +1,27 @@
-alphabet = ["a", "b", "c", "d", "e", "f", "g", "h","i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p","q","r","s","t","u","v","w","x","y","z","a","b","c","d","e","f"]
+alphabet = ["a", "b", "c", "d", "e", "f", "g", "h","i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p","q","r","s","t","u","v","w","x","y","z"]
 
 direction = input("Type 'encode' to encrypt and 'decode' to decrypt: \n")
 def encrypt(shift, text):
     # for i in range(len(alphabet)):
     #     print(alphabet[i])
     #     pass
-    message = []
+    message = ""
     for x in range(len(text)):
         letter = text[x]
         idx = alphabet.index(letter)
         message += alphabet[idx + shift]
-        
-    message = "".join(message)
+    # started with message as an array so the below line made it back into a string.
+    # message = "".join(message)
     print(f"The encoded text is {message}.")
 
 def decrpyt(shift, text):
-    message = []
+    message = ""
     for x in range(len(text)):
         letter = text[x]
         idx = alphabet.index(letter)
         message += alphabet[idx - shift]
-    message = "".join(message)
+    # below line made it back into a string
+    # message = "".join(message)
     print(f"The decoded text is {message}.")
 
 
