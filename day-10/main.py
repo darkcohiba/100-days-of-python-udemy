@@ -14,7 +14,7 @@ def format_name(f_name, l_name):
 def greeting(first, last):
     return (f"Hello, {format_name(first, last)}")
 
-print(greeting("Sam", "waTERS"))
+# print(greeting("Sam", "waTERS"))
 
 # lab 1
 def is_leap(year):
@@ -39,4 +39,5 @@ def days_in_month(year, month):
 year = int(input("enter a year: "))
 month = int(input("enter a month: "))
 days = days_in_month(year, month)
-print(days)
+# print(days)
+
