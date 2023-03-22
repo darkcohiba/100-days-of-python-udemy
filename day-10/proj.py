@@ -27,8 +27,8 @@ continue_math = True
 result = 0
 while continue_math:
     if result == 0:
-        first_number = int(input("What is your first number?: "))
-        second_number = int(input("What is your second number?: "))
+        first_number = float(input("What is your first number?: "))
+        second_number = float(input("What is your second number?: "))
         process = input(f"Choose a symbol from the options below: \n {processes} ")
 
         result = do_math(first_number, second_number, process)
@@ -37,11 +37,16 @@ while continue_math:
         if continue_question == "no":
             continue_math = False
     else:
-        second_number = int(input("What is your second number?: "))
+        second_number = float(input("What is your second number?: "))
         process = input(f"Choose a symbol from the options below: \n {processes} ")
         result = do_math(result, second_number, process)
         print(f"{first_number} {process} {second_number} = {result}")
-        continue_question = input("Would you like to continue and use the result as the first number?: \n (yes/no): ")
+        continue_question = ""
+        if result == 0:
+            continue_question = input("Would you like to continue and two new numbers?: \n (yes/no): ")
+        else:
+            continue_question = input("Would you like to continue and use the result as the first number?: \n (yes/no): ")
         if continue_question == "no":
+            print("Thanks for using the calculator! Please come again!")
             continue_math = False
     
