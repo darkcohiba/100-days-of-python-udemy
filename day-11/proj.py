@@ -4,17 +4,33 @@ import random
 print(blackjack)
 play = input("Do you want to play a game of Blackjack? (y/n): ")
 user_hand = []
-user_total = 0
 computer_hand = []
-computer_total = 0
-hit_me = True
-playing = True
+# user_total = 0
+# computer_total = 0
+# hit_me = True
+# playing = True
+
 def deal_cards():
+    """Returns a card from the deck"""
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
     card = random.choice(cards)
     return card
+
 for _ in range(2):
-    
+    # newCard = deal_cards()
+    user_hand.append(deal_cards())
+    computer_hand.append(deal_cards())
+
+def calculate_scores(cards):
+    if sum(cards) == 21 and len(cards) == 2:
+        return 0
+    if 11 in cards and sum(cards) > 21:
+        cards.remove(11)
+        cards.append(1)
+    return sum(cards)
+
+
+
 
 
 # def deal(user_total, computer_total):
