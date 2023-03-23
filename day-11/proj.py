@@ -38,6 +38,9 @@ def compare(user_score, computer_score):
         return "The user cards are closer to 21 than the computer, User wins!"
     else:
         return "You lose!"
+
+
+
 def play_game():
     print(blackjack)
     user_hand = []
@@ -50,7 +53,7 @@ def play_game():
 
     while not is_game_over:
         user_score = calculate_scores(user_hand)
-        print(user_score)
+        # print(user_score)
         computer_score = calculate_scores(computer_hand)
         print(f"The user score is {user_score}, and the user hand is {user_hand}")
         print(f"The computer first card is {computer_hand[0]}")
