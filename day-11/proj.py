@@ -1,11 +1,8 @@
 from art import *
 import random
 
-print(blackjack)
-play = input("Do you want to play a game of Blackjack? (y/n): ")
-user_hand = []
-computer_hand = []
-is_game_over = False
+# play = input("Do you want to play a game of Blackjack? (y/n): ")
+
 # user_total = 0
 # computer_total = 0
 # hit_me = True
@@ -26,38 +23,57 @@ def calculate_scores(cards):
         cards.append(1)
     return sum(cards)
 
-for _ in range(2):
-    # newCard = deal_cards()
-    user_hand.append(deal_cards())
-    computer_hand.append(deal_cards())
-print(computer_hand)
-
-while not is_game_over:
-    user_score = calculate_scores(user_hand)
-    computer_score = calculate_scores(computer_hand)
-    print(f"The user score is {user_score}, and the user hand is {user_hand}")
-    print(f"The computer first card is {computer_hand[0]}")
-
-    if user_score == 0 or computer_score == 0 or user_score > 21:
-        is_game_over = True
+def compare(user_score, computer_score):
+    if user_score == computer_score:
+        return "Its a draw"
+    elif computer_score == 0 or computer_score == 21:
+        return "User lost, Computer has a blackjack"
+    elif user_score == 0 or user_score == 21:
+        return "User won, you have a blackjack"
+    elif user_score > 21:
+        return "You bust! The computer wins!"
+    elif computer_score > 21:
+        return "The computer bust! User Wins!"
+    elif user_score > computer_score:
+        return "The user cards are closer to 21 than the computer, User wins!"
     else:
-        hit = input("Do you want to hit? (y/n): ")
-        if hit == 'y':
-            user_hand.append(deal_cards())
-            # print(user_hand)
-        else:
+        return "You lose!"
+def play_game():
+    print(blackjack)
+    user_hand = []
+    computer_hand = []
+    is_game_over = False
+    for _ in range(2):
+        # newCard = deal_cards()
+        user_hand.append(deal_cards())
+        computer_hand.append(deal_cards())
+
+    while not is_game_over:
+        user_score = calculate_scores(user_hand)
+        print(user_score)
+        computer_score = calculate_scores(computer_hand)
+        print(f"The user score is {user_score}, and the user hand is {user_hand}")
+        print(f"The computer first card is {computer_hand[0]}")
+
+        if user_score == 0 or computer_score == 0 or user_score > 21:
             is_game_over = True
-    
-while computer_score != 0 and computer_score < 17:
-    computer_hand.append(deal_cards())
-    computer_score = calculate_scores(computer_hand)
+        else:
+            hit = input("Do you want to hit? (y/n): ")
+            if hit == 'y':
+                user_hand.append(deal_cards())
+                # print(user_hand)
+            else:
+                is_game_over = True
+        
+    while computer_score != 0 and computer_score < 17:
+        computer_hand.append(deal_cards())
+        computer_score = calculate_scores(computer_hand)
 
-print(computer_hand)
+    print(compare(user_score, computer_score))
+    print(f"The user final hand is {user_hand}, the computer final hand is {computer_hand}")
 
-
-
-
-
+while input("Do you want to play a game of blackjack? (y/n): ") == "y":
+    play_game()
 
 
 
