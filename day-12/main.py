@@ -12,6 +12,7 @@ elif difficulty == 'hard':
 else:
     print('Choose a valid difficulty to play')
 
+
 while lives > 0:
     guess = int(input("Make a guess: "))
     if guess == number:
