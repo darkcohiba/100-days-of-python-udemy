@@ -3,7 +3,7 @@ from game_data import data
 from art import logo, vs
 
 
-def get_random():
+def get_randomizer():
     return random.choice(data)
 
 def format_data(data):
@@ -27,14 +27,14 @@ def game():
     print(logo)
     score = 0
     game_over = False
-    choice_1 = get_random()
-    choice_2 = get_random()
+    choice_1 = get_randomizer()
+    choice_2 = get_randomizer()
     while not game_over:
         choice_1 = choice_2
-        choice_2 = get_random()
+        choice_2 = get_randomizer()
 
         while choice_1 == choice_2:
-            choice_2 = get_random()
+            choice_2 = get_randomizer()
 
         print(f"Compare A: {format_data(choice_1)}")
         print(vs)
