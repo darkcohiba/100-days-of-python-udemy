@@ -13,7 +13,7 @@ def format_data(data):
     # print(f'{name}: {data["follower_count"]}')
     return f"{name}, a {description}, from {country}"
 
-def compare_followers(guess, follower_one, follower_two):
+def compare_account_followers(guess, follower_one, follower_two):
     # print(f'{guess} {follower_one} {follower_two}')
 
     if follower_one > follower_two:
@@ -43,7 +43,7 @@ def game():
         guess = input("Who has more followers, A or B: \n").lower()
         choice_1_followers = choice_1["follower_count"]
         choice_2_followers = choice_2["follower_count"]
-        is_correct = compare_followers(guess, choice_1_followers, choice_2_followers)
+        is_correct = compare_account_followers(guess, choice_1_followers, choice_2_followers)
         
 
         # print(logo)

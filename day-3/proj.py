@@ -17,3 +17,4 @@ if first_turn == "left":
             print("As you tell the boat keeper no a gigantic spider approaches from behind quickly casting a web around Dobbins and you. Your trapped in his web and slowly fade off into the darkness...death is upon you...game over.")
 else:
     print("Sadly a group alligators was hidden in the bushes and jumped out the second we turned right. Game Over...")
+
