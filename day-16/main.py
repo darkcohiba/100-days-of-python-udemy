@@ -2,7 +2,7 @@ from menu import Menu, MenuItem
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
 
-print(Menu().get_items())
+# print(Menu().get_items())
 
 
 def coffee_maker():
