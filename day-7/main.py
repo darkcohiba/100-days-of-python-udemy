@@ -2,12 +2,13 @@
 import requests
 import random
 from hangman import *
+
 word_site = "https://www.mit.edu/~ecprice/wordlist.10000"
 response = requests.get(word_site)
 WORDS = response.content.splitlines()
 word = str(random.choice(WORDS))
-new_word = word.replace("'","")
-final_word = new_word.replace("b","", 1)
+new_word = word.replace("'", "")
+final_word = new_word.replace("b", "", 1)
 display = []
 for each_letter in final_word:
     display += "_"
@@ -21,6 +22,7 @@ word_length = len(final_word)
 # print(final_word)
 guessed_letters = []
 lives = 7
+
 while word_length > 0:
     letter = input("Guess a letter: ").lower()
     if guessed_letters.count(letter) != 0:
