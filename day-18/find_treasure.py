@@ -7,6 +7,7 @@ treasure_y = random.randint(-150, 150)
 treasure = (treasure_y, treasure_x)
 print(treasure)
 
+
 def move(direction, paces):
     if direction == "forward":
         sam.forward(paces)
@@ -41,7 +42,11 @@ sam.hideturtle()
 sam.setposition(0, 0)
 sam.showturtle()
 sam.pendown()
+
+
 # print(continue_tell)
+
+
 while not continue_tell:
     direction = input("What direction should we go,back, forward, right, left?: ")
     paces = int(input("How far in that direction or to that angle should the turtle move? "))
