@@ -1,11 +1,23 @@
 from turtle import Turtle, Screen
+import random
 
-sam_the_turt = Turtle()
-sam_the_turt.shape("turtle")
+stt = Turtle()
+stt.shape("turtle")
 # challenge 1, create a square
-for x in range(4):
-    sam_the_turt.forward(100)
-    sam_the_turt.left(90)
+# for x in range(4):
+#     stt.forward(100)
+#     stt.left(90)
+
+
+# challenge 2 dashed line
+# for _ in range(50):
+#     stt.pendown()
+#     stt.forward(random.randint(15, 175))
+#     stt.penup()
+#     stt.forward(random.randint(15, 175))
+#     stt.left(random.randint(15, 175))
+
+
 
 screen = Screen()
 screen.exitonclick()
