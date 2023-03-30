@@ -127,27 +127,30 @@ stt = Turtle()
 #     cycle_right()
 
 # challenge spirograph
-turtle.colormode(255)
-def random_color():
-    r = random.randint(0, 255)
-    g = random.randint(0, 255)
-    b = random.randint(0, 255)
-    return (r, g, b)
+# turtle.colormode(255)
+# def random_color():
+#     r = random.randint(0, 255)
+#     g = random.randint(0, 255)
+#     b = random.randint(0, 255)
+#     return (r, g, b)
 
-stt.speed("fastest")
+# stt.speed("fastest")
 # for _ in range(100):
 #     stt.pencolor(random_color())
 #     stt.circle(80)
 #     stt.left(3.6)
 
-def draw(size_gap):
-    for _ in range(round(360 / size_gap)):
-        stt.pencolor(random_color())
-        stt.circle(200)
-        stt.setheading(stt.heading() + size_gap)
-
-draw(5)
-
+# def draw(size_gap, circle_size):
+#     for _ in range(round(360 / size_gap)):
+#         stt.pencolor(random_color())
+#         stt.circle(circle_size)
+#         stt.setheading(stt.heading() + size_gap)
+#
+# draw(5, 100)
+# draw(4, 125)
+# draw(4, 150)
+# draw(2, 175)
+# draw(1, 200)
 
 screen = Screen()
 screen.exitonclick()
