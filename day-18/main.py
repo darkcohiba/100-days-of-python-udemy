@@ -1,3 +1,4 @@
+import turtle
 from turtle import Turtle, Screen
 import random
 
@@ -34,9 +35,17 @@ stt = Turtle()
 # challenge 4 random path
 # choice = ["left", "right"]
 # colors = ["red", "yellow", "blue", "pink", "lime green", "spring green", "indigo", "maroon", "saddle brown"]
-#
+# direction = [0, 90, 180, 270]
 # stt.width(10)
-# stt.speed(3)
+# stt.pensize(10)
+# stt.speed("fastest")
+
+# for _ in range(500):
+#     color = random.choice(colors)
+#     stt.color(color)
+#     stt.forward(25)
+#     stt.setheading(random.choice(direction))
+
 # for _ in range(30):
 #     color = random.choice(colors)
 #     stt.color(color)
@@ -117,7 +126,27 @@ stt = Turtle()
 #     cycle_left()
 #     cycle_right()
 
+# challenge spirograph
+turtle.colormode(255)
+def random_color():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    return (r, g, b)
 
+stt.speed("fastest")
+# for _ in range(100):
+#     stt.pencolor(random_color())
+#     stt.circle(80)
+#     stt.left(3.6)
+
+def draw(size_gap):
+    for _ in range(round(360 / size_gap)):
+        stt.pencolor(random_color())
+        stt.circle(200)
+        stt.setheading(stt.heading() + size_gap)
+
+draw(5)
 
 
 screen = Screen()
