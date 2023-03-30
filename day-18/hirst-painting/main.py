@@ -18,6 +18,7 @@ turtle_module.colormode(255)
 color_list = [(61, 48, 52), (60, 54, 47), (11, 112, 170), (214, 230, 80), (98, 93, 53), (179, 36, 136), (162, 175, 29), (36, 127, 58), (28, 193, 72), (2, 178, 228)]
 position = tim.position()
 tim.speed("fastest")
+tim.ht()
 tim.penup()
 tim.setheading(225)
 tim.forward(250)
