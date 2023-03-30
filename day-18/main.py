@@ -152,5 +152,7 @@ stt = Turtle()
 # draw(2, 175)
 # draw(1, 200)
 
+
+
 screen = Screen()
 screen.exitonclick()
