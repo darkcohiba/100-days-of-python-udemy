@@ -2,7 +2,7 @@ from turtle import Turtle, Screen
 import random
 
 stt = Turtle()
-stt.shape("turtle")
+# stt.shape("turtle")
 # challenge 1, create a square
 # for x in range(4):
 #     stt.forward(100)
@@ -34,9 +34,10 @@ stt.shape("turtle")
 # challenge 4 random path
 # choice = ["left", "right"]
 # colors = ["red", "yellow", "blue", "pink", "lime green", "spring green", "indigo", "maroon", "saddle brown"]
-
+#
 # stt.width(10)
-# for _ in range(10):
+# stt.speed(3)
+# for _ in range(30):
 #     color = random.choice(colors)
 #     stt.color(color)
 #     stt.forward(25)
@@ -46,8 +47,8 @@ stt.shape("turtle")
 #         stt.left(90)
 
 # hirst painting trial
-colors = ["red", "yellow", "blue", "pink", "lime green", "spring green", "indigo", "maroon", "saddle brown"]
-stt.width(10)
+# colors = ["red", "yellow", "blue", "pink", "lime green", "spring green", "indigo", "maroon", "saddle brown"]
+# stt.width(10)
 
 #
 # def space():
@@ -115,6 +116,8 @@ stt.width(10)
 # for _ in range(40):
 #     cycle_left()
 #     cycle_right()
+
+
 
 
 screen = Screen()
