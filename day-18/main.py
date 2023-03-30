@@ -45,77 +45,76 @@ stt.shape("turtle")
 #     else:
 #         stt.left(90)
 
-# challenge 5 dot painting
-
+# hirst painting trial
 colors = ["red", "yellow", "blue", "pink", "lime green", "spring green", "indigo", "maroon", "saddle brown"]
 stt.width(10)
 
-
-def space():
-    stt.penup()
-    stt.forward(20)
-
-
-def dot():
-    stt.pendown()
-    stt.forward(10)
-
-
-def move_a_line():
-    for _ in range(10):
-        dot()
-        space()
-        dot()
-
-
-def turn_right():
-    stt.right(90)
-
-
-def turn_left():
-    stt.left(90)
-
-
-def move_up_line_right():
-    turn_right()
-    space()
-    turn_right()
-
-
-def move_up_line_left():
-    turn_left()
-    space()
-    turn_left()
-
-
-def set_color():
-    color = random.choice(colors)
-    stt.color(color)
-
-
-def set_posit(x, y):
-    stt.penup()
-    stt.setposition(x, y)
-    stt.pendown()
-
-
-set_posit(-200, -200)
-
-def cycle_left():
-    move_a_line()
-    set_color()
-    move_up_line_left()
-    set_color()
-
-def cycle_right():
-    move_a_line()
-    set_color()
-    move_up_line_right()
-    set_color()
-
-for _ in range(40):
-    cycle_left()
-    cycle_right()
+#
+# def space():
+#     stt.penup()
+#     stt.forward(20)
+#
+#
+# def dot():
+#     stt.pendown()
+#     stt.forward(10)
+#
+#
+# def move_a_line():
+#     for _ in range(10):
+#         dot()
+#         space()
+#         dot()
+#
+#
+# def turn_right():
+#     stt.right(90)
+#
+#
+# def turn_left():
+#     stt.left(90)
+#
+#
+# def move_up_line_right():
+#     turn_right()
+#     space()
+#     turn_right()
+#
+#
+# def move_up_line_left():
+#     turn_left()
+#     space()
+#     turn_left()
+#
+#
+# def set_color():
+#     color = random.choice(colors)
+#     stt.color(color)
+#
+#
+# def set_posit(x, y):
+#     stt.penup()
+#     stt.setposition(x, y)
+#     stt.pendown()
+#
+#
+# set_posit(-200, -200)
+#
+# def cycle_left():
+#     move_a_line()
+#     set_color()
+#     move_up_line_left()
+#     set_color()
+#
+# def cycle_right():
+#     move_a_line()
+#     set_color()
+#     move_up_line_right()
+#     set_color()
+#
+# for _ in range(40):
+#     cycle_left()
+#     cycle_right()
 
 
 screen = Screen()
