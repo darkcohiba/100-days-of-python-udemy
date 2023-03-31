@@ -55,9 +55,19 @@
 
 # angelica solution
 from turtle import Turtle, Screen
-tim = Turtle()
+
+colors_avail = ["green", "tan", "brown", "pink", "yellow", "blue"]
 screen = Screen()
 screen.setup(width=500, height=400)
+user_bet = screen.textinput(title="make your bet", prompt=f"Which turtle will win the race, enter a color,\n {colors_avail}")
+print(user_bet)
+y_var = [-70, -40, -10, 20, 50, 80]
+for turtle_index in range(0, 6):
+    tim = Turtle(shape="turtle")
+    tim.color(colors_avail[turtle_index])
+    # tim.speed("fastest")
+    tim.penup()
+    tim.goto(x=-230, y=y_var[turtle_index])
 
 
 
