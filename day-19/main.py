@@ -1,9 +1,9 @@
-import random
-from turtle import Turtle, Screen
-from time import sleep
+# import random
+# from turtle import Turtle, Screen
+# from time import sleep
 
 # tim = Turtle()
-screen = Screen()
+# screen = Screen()
 
 # etch a sketch
 # def reset_turtle():
@@ -54,8 +54,10 @@ screen = Screen()
 # set_up(10)
 
 # angelica solution
-
-
+from turtle import Turtle, Screen
+tim = Turtle()
+screen = Screen()
+screen.setup(width=500, height=400)
 
 
 
