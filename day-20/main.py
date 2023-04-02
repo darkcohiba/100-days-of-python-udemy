@@ -1,3 +1,13 @@
-import random
+from turtle import Turtle, Screen
 
-print(random.randint(0, 10_000))
+screen = Screen()
+screen.setup(width=600, height=600)
+screen.bgcolor("black")
+screen.title("My Snake Game")
+
+
+
+
+
+
+screen.exitonclick()
