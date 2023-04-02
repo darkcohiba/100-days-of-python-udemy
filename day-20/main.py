@@ -6,13 +6,15 @@ screen.bgcolor("black")
 screen.title("My Snake Game")
 
 x_position = 0
-y_position = 0
+
+snakes = []
 for _ in range(3):
-    new_turtle = Turtle()
-    new_turtle.shape("square")
+    new_turtle = Turtle(shape="square")
     new_turtle.color("white")
-    new_turtle.setposition(x_position, y_position)
+    new_turtle.setposition(x_position, 0)
     x_position -= 20
+    snakes.append(new_turtle)
+
 
 
 
