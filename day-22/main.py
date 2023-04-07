@@ -7,3 +7,6 @@
 #     -detect collision with paddle
 #     -detect when paddle misses
 #     -keep score
+
+
+
