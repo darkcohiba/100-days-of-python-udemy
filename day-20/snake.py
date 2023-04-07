@@ -16,10 +16,12 @@ class Snake:
         self.head = self.segments[0]
 
     def create_snake(self):
+        """This function creates our 3 starter snake segments."""
         for position in STARTING_POSITIONS:
             self.add_segment(position)
 
     def move(self):
+        """This function makes the head move and each following segment follow the segment ahead of it."""
         for seg_num in range(len(self.segments) - 1, 0, -1):
             new_x = self.segments[seg_num - 1].xcor()
             new_y = self.segments[seg_num - 1].ycor()
@@ -27,6 +29,7 @@ class Snake:
         self.head.forward(MOVE_DISTANCE)
 
     def add_segment(self, position):
+        """This function creates a new segment at a given position."""
         new_segment = Turtle("square")
         new_segment.color("white")
         new_segment.penup()
@@ -34,6 +37,7 @@ class Snake:
         self.segments.append(new_segment)
 
     def extend(self):
+        """this function extends the length of the snake by 1 segment."""
         self.add_segment(self.segments[-1].position())
 
 
