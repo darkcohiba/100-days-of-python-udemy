@@ -21,7 +21,9 @@ class Snake:
             self.add_segment(position)
 
     def move(self):
-        """This function makes the head move and each following segment follow the segment ahead of it."""
+        """
+        This function makes the head move and each following segment follow the segment ahead of it.
+        """
         for seg_num in range(len(self.segments) - 1, 0, -1):
             new_x = self.segments[seg_num - 1].xcor()
             new_y = self.segments[seg_num - 1].ycor()
