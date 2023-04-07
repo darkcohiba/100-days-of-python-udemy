@@ -11,6 +11,8 @@
 
 from turtle import Screen, Turtle
 from paddle import Paddle
+from ball import Ball
+
 
 screen = Screen()
 screen.bgcolor("black")
@@ -20,27 +22,21 @@ screen.tracer(0)
 
 r_paddle = Paddle((350, 0))
 l_paddle = Paddle((-350, 0))
+ball = Ball()
+ball = Ball()
+ball = Ball()
+ball = Ball()
 
 
-# creating paddle
-# paddle = Turtle("square")
-# paddle.goto(350, 0)
-# paddle.color("white")
-# paddle.turtlesize(stretch_wid=5, stretch_len=1)
-# paddle.penup()
-#
-# def go_up():
-#     new_y = paddle.ycor() + 20
-#     paddle.goto(paddle.xcor(), new_y)
-#
-# def go_down():
-#     new_y = paddle.ycor() - 20
-#     paddle.goto(paddle.xcor(), new_y)
+
 
 screen.listen()
 
-# screen.onkey(key="Up", fun=go_up)
-# screen.onkey(key="Down", fun=go_down)
+screen.onkey(key="Up", fun=r_paddle.go_up)
+screen.onkey(key="Down", fun=r_paddle.go_down)
+
+screen.onkey(key="w", fun=l_paddle.go_up)
+screen.onkey(key="s", fun=l_paddle.go_down)
 
 game_is_on = True
 while game_is_on:
