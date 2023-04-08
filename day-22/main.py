@@ -38,10 +38,17 @@ screen.onkey(key="w", fun=l_paddle.go_up)
 screen.onkey(key="s", fun=l_paddle.go_down)
 
 game_is_on = True
+
+l_player_score = 0
+r_player_score = 0
 while game_is_on:
     time.sleep(0.1)
     screen.update()
     ball.move()
+
+    if ball.ycor() > 300 or ball.ycor() < -300:
+        print("bounce")
+        ball.bounce()
 
 
 
