@@ -22,5 +22,9 @@ class Ball(Turtle):
             self.goto(new_x, new_y)
         balls += 1
 
+    def move(self):
+        new_x = self.xcor() + 10
+        new_y = self.ycor() + 10
+        self.goto(new_x, new_y)
 
 
