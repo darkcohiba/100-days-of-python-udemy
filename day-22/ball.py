@@ -9,6 +9,7 @@ class Ball(Turtle):
         super().__init__()
         self.x_move = 10
         self.y_move = 10
+        self.move_speed = 0.1
 
         self.create_ball()
 
@@ -35,6 +36,7 @@ class Ball(Turtle):
     def bounce_y(self):
         """Use this to bounce the ball on the y axis, changes the y axis multiplier to negative"""
         self.y_move *= -1
+        self.move_speed *= .9
 
     def bounce_x(self):
         """Use this to bounce the ball on the x axis, changes the x axis multiplier to negative"""
@@ -43,6 +45,7 @@ class Ball(Turtle):
     def reset_position(self):
         sleep(1)
         self.goto(0, 0)
+        self.move_speed = 0.1
         self.bounce_x()
 
 
