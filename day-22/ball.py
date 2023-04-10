@@ -1,5 +1,6 @@
 from turtle import Turtle
 from random import randint as rt
+from time import sleep
 
 balls = 0
 
@@ -38,6 +39,11 @@ class Ball(Turtle):
     def bounce_x(self):
         """Use this to bounce the ball on the x axis, changes the x axis multiplier to negative"""
         self.x_move *= -1
+
+    def reset_position(self):
+        sleep(1)
+        self.goto(0, 0)
+        self.bounce_x()
 
 
 
