@@ -12,6 +12,7 @@ class Ball(Turtle):
         self.create_ball()
 
     def create_ball(self):
+        """This function will create a ball and the first ball created will go in the center of the screen"""
         print("new ball")
         self.penup()
         self.shape("circle")
@@ -25,14 +26,17 @@ class Ball(Turtle):
         balls += 1
 
     def move(self):
+        """This will move the ball diagonally"""
         new_x = self.xcor() + self.x_move
         new_y = self.ycor() + self.y_move
         self.goto(new_x, new_y)
 
     def bounce_y(self):
+        """Use this to bounce the ball on the y axis, changes the y axis multiplier to negative"""
         self.y_move *= -1
 
     def bounce_x(self):
+        """Use this to bounce the ball on the x axis, changes the x axis multiplier to negative"""
         self.x_move *= -1
 
 
