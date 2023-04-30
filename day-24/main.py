@@ -17,5 +17,11 @@
 #     file.write("help.")
 
 # append text to the file
-with open("file.txt", mode="a") as file:
-    file.write("second help.")
+# with open("file.txt", mode="a") as file:
+#     file.write("\nthird help.")
+
+
+# write a new file
+# with open("new_file.txt", mode="w") as file:
+#     file.write("New File.")
+
