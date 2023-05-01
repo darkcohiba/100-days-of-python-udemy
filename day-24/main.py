@@ -25,3 +25,6 @@
 # with open("new_file.txt", mode="w") as file:
 #     file.write("New File.")
 
+with open("../../../../Desktop/file.txt") as file:
+    contents = file.read()
+    print(contents)
