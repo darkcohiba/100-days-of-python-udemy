@@ -25,6 +25,10 @@
 # with open("new_file.txt", mode="w") as file:
 #     file.write("New File.")
 
-with open("../../../../Desktop/file.txt") as file:
-    contents = file.read()
+# with open("../../../../Desktop/file.txt") as file:
+#     contents = file.read()
+#     print(contents)
+
+with open("./Input/Names/invited_guests.txt") as f:
+    contents = f.read()
     print(contents)
