@@ -30,5 +30,17 @@
 #     print(contents)
 
 with open("./Input/Names/invited_guests.txt") as f:
-    contents = f.read()
-    print(contents)
+    contents = f.readlines()
+
+with open("./Input/Letters/starting_letter.txt") as f:
+    old_letter = f.read()
+    for name in contents:
+        stripped_name = name.strip()
+        new_letter = old_letter.replace("[name]", stripped_name)
+        with open(f"./Output/ReadyToSend/for_{stripped_name}.txt", mode="w") as completed_letter:
+            completed_letter.write(new_letter)
+
+# with open("./Input/Letters/starting_letter.txt") as f:
+#     contents = f.read()
+#     new_letter = contents.replace("[name]", "Sam")
+#     print(new_letter)

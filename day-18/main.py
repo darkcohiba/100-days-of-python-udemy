@@ -39,13 +39,13 @@ stt = Turtle()
 # stt.width(10)
 # stt.pensize(10)
 # stt.speed("fastest")
-
+#
 # for _ in range(500):
 #     color = random.choice(colors)
 #     stt.color(color)
 #     stt.forward(25)
 #     stt.setheading(random.choice(direction))
-
+#
 # for _ in range(30):
 #     color = random.choice(colors)
 #     stt.color(color)
