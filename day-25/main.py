@@ -18,6 +18,17 @@
 
 import pandas
 data = pandas.read_csv("weather_data.csv")
-print(data)
-print(data["temp"])
+# print(data)
+# print(data["temp"])
+
+# print(len(data.temp))
+# print(data.temp)
+# print(data["temp"])
+
+# getting a row
+# print(data[data.day == "Monday"])
+
+# print(data.temp.max())
+# get the rows with the highest temp
+print(data[data.temp == data.temp.max()])
 
