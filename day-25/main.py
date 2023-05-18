@@ -43,3 +43,14 @@ def convert(temp):
 # print(monday_temp)
 # print(convert(monday_temp))
 
+
+# create a new csv
+student_dict = {
+    "students": ["Amy", "Sam", "Gabe"],
+    "scores": [50, 60, 80]
+}
+
+new_data = pandas.DataFrame(student_dict)
+# print(new_data)
+# new_data.to_csv("student_data.csv")
+
