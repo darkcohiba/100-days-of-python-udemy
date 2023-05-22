@@ -17,7 +17,7 @@
 
 import pandas
 
-data = pandas.read_csv("weather_data.csv")
+# data = pandas.read_csv("weather_data.csv")
 # print(data)
 # print(data["temp"])
 
@@ -34,8 +34,8 @@ data = pandas.read_csv("weather_data.csv")
 
 
 # convert temp to farenheit
-def convert(temp):
-    return (temp * 9 / 5) + 32
+# def convert(temp):
+#     return (temp * 9 / 5) + 32
 
 
 # monday = data[data.day == "Monday"]
@@ -45,15 +45,17 @@ def convert(temp):
 
 
 # create a new csv
-student_dict = {
-    "students": ["Amy", "Sam", "Gabe"],
-    "scores": [50, 60, 80]
-}
+# student_dict = {
+#     "students": ["Amy", "Sam", "Gabe"],
+#     "scores": [50, 60, 80]
+# }
 
-new_data = pandas.DataFrame(student_dict)
+# new_data = pandas.DataFrame(student_dict)
 # print(new_data)
 # new_data.to_csv("student_data.csv")
 
 squirrel_data = pandas.read_csv('2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv')
+fur = squirrel_data["Primary Fur Color"]
+print(fur)
 
 
