@@ -30,7 +30,7 @@ data = pandas.read_csv("weather_data.csv")
 
 # print(data.temp.max())
 # get the rows with the highest temp
-print(data[data.temp == data.temp.max()])
+# print(data[data.temp == data.temp.max()])
 
 
 # convert temp to farenheit
@@ -53,4 +53,7 @@ student_dict = {
 new_data = pandas.DataFrame(student_dict)
 # print(new_data)
 # new_data.to_csv("student_data.csv")
+
+squirrel_data = pandas.read_csv('2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv')
+
 
