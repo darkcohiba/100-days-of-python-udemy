@@ -11,6 +11,9 @@ correct_names = [n.title() for n in names]
 # list comprehension with strings
 name = "Sam"
 new_name = [letter for letter in name]
-print(new_name)
+# print(new_name)
 
 # working with ranges
+new_numbers = [num * 2 for num in range(1,5)]
+print(new_numbers)
+
