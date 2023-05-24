@@ -27,3 +27,7 @@ short_names = [name.title() for name in conditional_names if len(name) <= 4]
 numbers= [1, 2, 3, 4, 5]
 exponent_num = [num **2 for num in numbers]
 # print(exponent_num)
+
+# even numbers
+even_num = [num for num in numbers if num%2 == 0]
+print(even_num)
