@@ -15,5 +15,15 @@ new_name = [letter for letter in name]
 
 # working with ranges
 new_numbers = [num * 2 for num in range(1,5)]
-print(new_numbers)
+# print(new_numbers)
 
+# conditional comprehension
+# [new_item for item in list if test]
+conditional_names = ["Allison", "beth", "Caroline", "FRed", "Peter", "David", "Seb", "Tom"]
+short_names = [name.title() for name in conditional_names if len(name) <= 4]
+# print(short_names)
+
+# square numbers
+numbers= [1, 2, 3, 4, 5]
+exponent_num = [num **2 for num in numbers]
+# print(exponent_num)
