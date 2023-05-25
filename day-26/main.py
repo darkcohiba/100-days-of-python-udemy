@@ -38,6 +38,6 @@ print(even_num)
 students = ["Sam", "Max", "Alex", "Smith"]
 from random import randint as ri
 student_grades = {item:ri(50, 99) for item in students}
-print(student_grades)
+# print(student_grades)
 students_passed = {student:score for (student, score) in student_grades.items() if score > 70}
-print(students_passed)
+# print(students_passed)
