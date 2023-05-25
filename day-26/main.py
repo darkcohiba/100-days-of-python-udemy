@@ -31,3 +31,11 @@ exponent_num = [num **2 for num in numbers]
 # even numbers
 even_num = [num for num in numbers if num%2 == 0]
 print(even_num)
+
+# dict comprehension
+# new_dict = {new_key:new_value for item in list}
+# new_dict = {new_key:new_value for (key, value) in dict.items()}
+students = ["Sam", "Max", "Alex", "Smith"]
+from random import randint as ri
+student_grades = {item:ri(50, 99) for item in students}
+print(student_grades)
