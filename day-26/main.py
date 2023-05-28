@@ -30,7 +30,7 @@ exponent_num = [num **2 for num in numbers]
 
 # even numbers
 even_num = [num for num in numbers if num%2 == 0]
-print(even_num)
+# print(even_num)
 
 # dict comprehension
 # new_dict = {new_key:new_value for item in list}
@@ -41,5 +41,9 @@ from random import randint as ri
 student_grades = {item:ri(50, 99) for item in students}
 # print(student_grades)
 students_passed = {student:score for (student, score) in student_grades.items() if score > 70}
-print(students_passed)
+# print(students_passed)
 
+sentence = "What is the airspeed velocity of an unloaden swallow?"
+sentence_words = sentence.split(" ")
+sentence_dict = {word:len(word) for word in sentence_words}
+print(sentence_dict)
