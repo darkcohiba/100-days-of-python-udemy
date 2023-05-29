@@ -46,4 +46,4 @@ students_passed = {student:score for (student, score) in student_grades.items() 
 sentence = "What is the airspeed velocity of an unloaden swallow?"
 sentence_words = sentence.split(" ")
 sentence_dict = {word:len(word) for word in sentence_words}
-print(sentence_dict)
+# print(sentence_dict)
