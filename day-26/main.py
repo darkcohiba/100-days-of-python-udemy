@@ -47,5 +47,23 @@ sentence = "What is the airspeed velocity of an unloaden swallow?"
 sentence_words = sentence.split(" ")
 sentence_dict = {word:len(word) for word in sentence_words}
 sentence_dict_two = {word:len(word) for word in sentence.split(" ")}
-print(sentence_dict_two)
+# print(sentence_dict_two)
 # print(sentence_dict)
+
+weather_c = {
+    "Monday": 12,
+    "Tuesday": 14,
+    "Wednesday": 15,
+    "Thursday": 14,
+    "Friday": 21,
+    "Saturday": 22,
+    "Sunday": 24
+}
+
+def convert_to_f(c):
+    return (c * 9 / 5) + 32
+
+weather_f ={key:convert_to_f(value) for (key, value) in weather_c.items()}
+weather_f_sol ={key:(value * 9/5) +32 for (key, value) in weather_c.items()}
+# print(weather_f_sol)
+# print(weather_f)
