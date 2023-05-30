@@ -67,3 +67,10 @@ weather_f ={key:convert_to_f(value) for (key, value) in weather_c.items()}
 weather_f_sol ={key:(value * 9/5) +32 for (key, value) in weather_c.items()}
 # print(weather_f_sol)
 # print(weather_f)
+
+
+student_grades = {
+    "student": ["Angela", "James", "Lily"],
+    "score": [56, 76, 98]
+}
+
