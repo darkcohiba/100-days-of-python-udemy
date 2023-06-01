@@ -75,7 +75,14 @@ student_grades = {
 }
 
 import pandas
+import time
 
 student_data_frame = pandas.DataFrame(student_grades)
-print(student_data_frame)
+# print(student_data_frame)
 
+# loop through rows of data with pandas
+for (index, row) in student_data_frame.iterrows():
+    if (row.score > 80):
+        print("the only passing student is...")
+        # time.sleep(3)
+        print(row.student, row.score)
