@@ -81,8 +81,24 @@ student_data_frame = pandas.DataFrame(student_grades)
 # print(student_data_frame)
 
 # loop through rows of data with pandas
-for (index, row) in student_data_frame.iterrows():
-    if (row.score > 80):
-        print("the only passing student is...")
+# for (index, row) in student_data_frame.iterrows():
+#     if (row.score > 80):
+        # print(type(row))
+        # print("the only passing student is...")
         # time.sleep(3)
-        print(row.student, row.score)
+        # print(row.student, row.score)
+# dictionary comprehension using dataframes:
+# {new_key:new_value for (index, row) in df.iterrows()}
+
+nato_alpha_csv = pandas.read_csv("nato_phonetic_alphabet.csv")
+# print(nato_alpha_csv)
+nato_alpha_dict = {row.letter:row.code for (index, row) in nato_alpha_csv.iterrows()}
+
+nato_alpha_dict_frame = pandas.DataFrame(nato_alpha_dict)
+name = input("Enter your name: ")
+# nato_name = [item for item in nato_alpha_dict]
+# [new_item for item in list if test]
+# new_dict = {new_key:new_value for (key, value) in dict.items()}
+
+nato_name = {}
+print(nato_name)
