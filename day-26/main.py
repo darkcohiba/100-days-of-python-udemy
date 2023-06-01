@@ -93,12 +93,6 @@ student_data_frame = pandas.DataFrame(student_grades)
 nato_alpha_csv = pandas.read_csv("nato_phonetic_alphabet.csv")
 # print(nato_alpha_csv)
 nato_alpha_dict = {row.letter:row.code for (index, row) in nato_alpha_csv.iterrows()}
-
-nato_alpha_dict_frame = pandas.DataFrame(nato_alpha_dict)
-name = input("Enter your name: ")
-# nato_name = [item for item in nato_alpha_dict]
-# [new_item for item in list if test]
-# new_dict = {new_key:new_value for (key, value) in dict.items()}
-
-nato_name = {}
+name = input("Enter your name: ").upper()
+nato_name = [nato_alpha_dict[letter] for letter in name]
 print(nato_name)
