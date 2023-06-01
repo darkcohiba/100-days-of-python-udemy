@@ -74,3 +74,8 @@ student_grades = {
     "score": [56, 76, 98]
 }
 
+import pandas
+
+student_data_frame = pandas.DataFrame(student_grades)
+print(student_data_frame)
+
