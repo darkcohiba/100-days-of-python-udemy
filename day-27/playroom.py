@@ -1,8 +1,11 @@
 def addition(*numbers):
     sum = 0
-    for num in numbers:
-        sum += num
+    for n in numbers:
+        sum += n
     print(sum)
 
 
-addition(2, 3, 4, 5, 1)
+addition(3, 3, 3, 3, 3, 1)
+
+
+
