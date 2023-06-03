@@ -1,3 +1,4 @@
+# *args
 def addition(*numbers):
     sum = 0
     for n in numbers:
@@ -8,4 +9,4 @@ def addition(*numbers):
 addition(3, 3, 3, 3, 3, 1)
 
 
-
+# **kwargs
