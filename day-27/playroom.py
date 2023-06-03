@@ -19,3 +19,12 @@ def calculate(n, **kwargs):
     print(n)
 
 calculate(3, add=8, multiply=5)
+
+# kwargs in a class
+
+class Car:
+
+    def __init__(self, **kw):
+        self.make = kw["make"]
+        self.model = kw["model"]
+
