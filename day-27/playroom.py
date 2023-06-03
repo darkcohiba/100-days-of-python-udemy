@@ -18,7 +18,7 @@ def calculate(n, **kwargs):
     n *= kwargs["multiply"]
     print(n)
 
-calculate(3, add=8, multiply=5)
+# calculate(3, add=8, multiply=5)
 
 # kwargs in a class
 
@@ -28,3 +28,7 @@ class Car:
         self.make = kw["make"]
         self.model = kw["model"]
 
+taco = Car(make="Ford", model="Escape")
+
+print(taco.make)
+print(taco.model)
