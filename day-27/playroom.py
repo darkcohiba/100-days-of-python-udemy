@@ -6,7 +6,16 @@ def addition(*numbers):
     print(sum)
 
 
-addition(3, 3, 3, 3, 3, 1)
+# addition(3, 3, 3, 3, 3, 1)
 
 
 # **kwargs
+def calculate(n, **kwargs):
+    # print(kwargs)
+    # for key,value in kwargs.items():
+    #     print(key)
+    n += kwargs["add"]
+    n *= kwargs["multiply"]
+    print(n)
+
+calculate(3, add=8, multiply=5)
