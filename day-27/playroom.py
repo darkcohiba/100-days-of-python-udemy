@@ -30,5 +30,7 @@ class Car:
 
 taco = Car(make="Ford", model="Escape")
 
-print(taco.make)
-print(taco.model)
+# print(taco.make)
+# print(taco.model)
+taco.name = "Taco"
+# print(taco.name)
