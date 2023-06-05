@@ -12,8 +12,15 @@ first_label = tkinter.Label(text="My First Label", font=("Arial", 24, "italic"))
 first_label.pack()
 
 
+# change text two different ways
+# first_label["text"] = "updated"
+# first_label.config(text="updated again!")
 
-
+# create button along with button function
+def button_click():
+    print("clicked!")
+button = tkinter.Button(text="Click Me!", command=button_click)
+button.pack()
 
 
 

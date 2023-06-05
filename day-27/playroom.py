@@ -33,4 +33,18 @@ taco = Car(make="Ford", model="Escape")
 # print(taco.make)
 # print(taco.model)
 taco.name = "Taco"
-# print(taco.name)
+
+print(taco.name)
+print(taco.model)
+
+
+class Sport:
+
+    def __init__(self, **kw):
+        self.name = kw.get("name")
+        self.ball = kw.get("ball")
+
+baseball = Sport(name="Baseball")
+# since we use get then we wont get an error if we dont have a field populated unlike when we use kw[] style as above
+print(baseball.ball)
+
