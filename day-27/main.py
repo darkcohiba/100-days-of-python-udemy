@@ -24,7 +24,8 @@ button = tkinter.Button(text="Click Me!", command=button_click)
 button.pack()
 
 # entry component
-
+input = tkinter.Entry()
+input.pack()
 
 
 
