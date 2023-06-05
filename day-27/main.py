@@ -19,16 +19,15 @@ first_label.pack()
 # create button along with button function
 def button_click():
     print("clicked!")
-    first_label["text"] = "button was clicked!"
+    first_label["text"] = input.get()
+
+
 button = tkinter.Button(text="Click Me!", command=button_click)
 button.pack()
 
 # entry component
-input = tkinter.Entry()
+input = tkinter.Entry(width=20)
 input.pack()
-
-
-
 
 # keep the window open
 window.mainloop()
