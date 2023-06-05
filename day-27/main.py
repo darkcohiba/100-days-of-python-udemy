@@ -19,8 +19,11 @@ first_label.pack()
 # create button along with button function
 def button_click():
     print("clicked!")
+    first_label["text"] = "button was clicked!"
 button = tkinter.Button(text="Click Me!", command=button_click)
 button.pack()
+
+# entry component
 
 
 
