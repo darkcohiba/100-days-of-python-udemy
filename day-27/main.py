@@ -23,10 +23,12 @@ def button_click():
 
 
 button = tkinter.Button(text="Click Me!", command=button_click)
+# add component to page
 button.pack()
 
 # entry component
 input = tkinter.Entry(width=20)
+# add component to page
 input.pack()
 
 # keep the window open
