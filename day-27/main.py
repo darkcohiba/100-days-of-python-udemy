@@ -31,5 +31,12 @@ input = tkinter.Entry(width=20)
 # add component to page
 input.pack()
 
+numbers = [10, 12, 13, 15, 20]
+
+[10, 12, 13, 15]
+
+results = [number for number in numbers if number < 11]
+print(results)
 # keep the window open
 window.mainloop()
+
