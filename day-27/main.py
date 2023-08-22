@@ -30,6 +30,9 @@ button.pack()
 input = tkinter.Entry(width=20)
 # add component to page
 input.pack()
+
+# text box
+text = tkinter.Text()
 #
 # numbers = [10, 12, 13, 15, 20]
 #
