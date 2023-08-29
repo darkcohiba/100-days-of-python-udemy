@@ -43,7 +43,7 @@ text.pack()
 def radio_used():
     print(radio_state.get())
     first_label["text"] = radio_state.get()
-    
+
 #Variable to hold on to which radio button value is checked.
 radio_state = tkinter.IntVar()
 radiobutton1 = tkinter.Radiobutton(text="Option1", value=1, variable=radio_state, command=radio_used)
