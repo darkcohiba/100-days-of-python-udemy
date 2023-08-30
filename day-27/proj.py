@@ -1,7 +1,6 @@
 # miles to kilometers converter
-import tkinter
-
-window = tkinter.Tk()
+from tkinter import *
+window = Tk()
 # title
 window.title("GUI!")
 # sizing
