@@ -5,6 +5,7 @@ window = Tk()
 window.title("Miles to KM Converter!")
 # sizing
 # window.minsize(width=200, height=200)
+window.config(padx=20, pady=20)
 
 
 def calculate_km():
