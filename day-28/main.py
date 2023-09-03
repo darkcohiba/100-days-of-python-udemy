@@ -1,3 +1,5 @@
+from tkinter import *
+
 
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
@@ -16,3 +18,16 @@ LONG_BREAK_MIN = 20
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 
 # ---------------------------- UI SETUP ------------------------------- #
+window = Tk()
+window.title("Pomodoro")
+
+canvas = Canvas(width=200, height=224)
+canvas.create_image(100, 112, image="")
+
+
+
+
+
+
+# keep the window open
+window.mainloop()
