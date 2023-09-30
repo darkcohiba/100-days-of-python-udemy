@@ -1,3 +1,4 @@
+import math
 from tkinter import *
 
 
@@ -15,15 +16,21 @@ LONG_BREAK_MIN = 20
 
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 def start_time():
-    count_down(5)
+    count_down(WORK_MIN * 60)
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 def count_down(count):
     # format time from chatgpt
-    minutes = count // 60
-    seconds = count % 60
-    time_formatted = f"{minutes:02d}:{seconds:02d}"  # This line formats the time as "00:05", "00:04", etc.
-    print(time_formatted)
-    canvas.itemconfig(timer_text, text=time_formatted)
+    # minutes = count // 60
+    # seconds = count % 60
+    # time_formatted = f"{minutes:02d}:{seconds:02d}"  # This line formats the time as "00:05", "00:04", etc.
+    # print(time_formatted)
+    # canvas.itemconfig(timer_text, text=time_formatted)
+    # course fomatting
+    count_min = math.floor(count / 60)
+    count_sec = count % 60
+    if count_sec < 10:
+        count_sec = f"0{count_sec}"
+    canvas.itemconfig(timer_text, text=f"{count_min}:{count_sec}")
     # pre chatgpt time format
     # print(count)
     # canvas.itemconfig(timer_text, text=count)
@@ -43,7 +50,7 @@ canvas = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
 tomato_img = PhotoImage(file="tomato.png")
 
 canvas.create_image(100, 112, image=tomato_img)
-timer_text = canvas.create_text(100, 112, text="00:05", fill="black", font=(FONT_NAME, "35", "bold"))
+timer_text = canvas.create_text(100, 112, text="25:00", fill="black", font=(FONT_NAME, "35", "bold"))
 canvas.grid(column=1, row=1)
 
 
