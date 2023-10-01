@@ -19,14 +19,21 @@ reps = 0
 def start_time():
     global reps
     reps += 1
+    if reps > 8:
+        pass
     if reps % 8 == 0:
         print("long break min")
+        title_label.config(text="Break")
         count_down(LONG_BREAK_MIN * 60)
     elif reps % 2 == 0:
         print("short break min")
+        title_label.config(text="Break")
+
         count_down(SHORT_BREAK_MIN * 60)
     else:
         print("work min")
+        title_label.config(text="Work")
+
         count_down(WORK_MIN * 60)
 
 
@@ -50,6 +57,8 @@ def count_down(count):
     # canvas.itemconfig(timer_text, text=count)
     if count > 0:
         window.after(1000, count_down, count - 1)
+    else:
+        start_time()
 
 
 # ---------------------------- UI SETUP ------------------------------- #
