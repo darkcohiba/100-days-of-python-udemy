@@ -23,16 +23,16 @@ def start_time():
         pass
     if reps % 8 == 0:
         print("long break min")
-        title_label.config(text="Break")
+        title_label.config(text="Break", fg=RED)
         count_down(LONG_BREAK_MIN * 60)
     elif reps % 2 == 0:
         print("short break min")
-        title_label.config(text="Break")
+        title_label.config(text="Break", fg=PINK)
 
         count_down(SHORT_BREAK_MIN * 60)
     else:
         print("work min")
-        title_label.config(text="Work")
+        title_label.config(text="Work", fg=GREEN)
 
         count_down(WORK_MIN * 60)
 
