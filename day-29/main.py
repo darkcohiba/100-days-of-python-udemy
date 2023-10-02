@@ -8,7 +8,7 @@ from tkinter import *
 # ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
-window.title("Pomodoro")
+window.title("Password Manger")
 window.config(padx=100, pady=50, bg="yellow")
 
 
