@@ -13,14 +13,15 @@ LONG_BREAK_MIN = 20
 reps = 1
 timer = None
 
+
 # ---------------------------- TIMER RESET ------------------------------- #
 def reset_timer():
     window.after_cancel(timer)
-    title_label.config(text="Timer", fg=GREEN,)
+    title_label.config(text="Timer", fg=GREEN, )
     check_marks.config(text="")
     canvas.itemconfig(timer_text, text="25:00")
-
-
+    global reps
+    reps = 1
 
 
 # ---------------------------- TIMER MECHANISM ------------------------------- #
@@ -80,11 +81,6 @@ def count_down(count):
         check_marks.config(text=marks)
 
         start_time()
-
-
-
-
-
 
 
 # ---------------------------- UI SETUP ------------------------------- #
