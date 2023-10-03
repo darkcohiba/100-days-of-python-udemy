@@ -9,7 +9,7 @@ from tkinter import *
 
 window = Tk()
 window.title("Password Manger")
-window.config(padx=20, pady=20, bg="white")
+window.config(padx=100, pady=100, bg="white")
 
 # canvas with our image
 canvas = Canvas(width=200, height=200, bg="white", highlightthickness=0)
