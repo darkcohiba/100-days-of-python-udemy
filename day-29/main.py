@@ -39,6 +39,7 @@ password_entry.grid(row=3, column=1)
 
 # buttons
 generate_password_button = Button(text="Generate Password")
+generate_password_button.grid(row=3, column=3)
 
 add_button = Radiobutton(text="Add")
 
