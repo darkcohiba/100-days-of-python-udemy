@@ -5,6 +5,7 @@ from tkinter import *
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
+#     save data to the file here
     pass
 # ---------------------------- UI SETUP ------------------------------- #
 
