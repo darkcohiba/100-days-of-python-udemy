@@ -4,7 +4,8 @@ from tkinter import *
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
-
+def save():
+    pass
 # ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
@@ -30,9 +31,11 @@ password_label.grid(row=3, column=0)
 # input fields
 website_entry = Entry(width=35, fg="black", bg="white", highlightthickness=0, highlightbackground="white")
 website_entry.grid(row=1, column=1, columnspan=2)
+website_entry.focus()
 
 email_entry = Entry(width=35, fg="black", bg="white", highlightthickness=0, highlightbackground="white")
 email_entry.grid(row=2, column=1, columnspan=2)
+email_entry.insert(0, "email@gmail.com")
 
 password_entry = Entry(width=21, fg="black", bg="white", highlightthickness=0, highlightbackground="white")
 password_entry.grid(row=3, column=1)
@@ -41,7 +44,7 @@ password_entry.grid(row=3, column=1)
 generate_password_button = Button(text="Generate Password", highlightthickness=0, highlightbackground="white")
 generate_password_button.grid(row=3, column=2)
 
-add_button = Button(text="Add", width=36, highlightthickness=0, highlightbackground="white")
+add_button = Button(text="Add", width=36, highlightthickness=0, highlightbackground="white", command=save)
 add_button.grid(column=1, row=4, columnspan=2)
 
 # keep the window open
