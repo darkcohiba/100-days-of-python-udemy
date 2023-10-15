@@ -5,8 +5,14 @@ from tkinter import *
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
-#     save data to the file here
-    pass
+    website = website_entry.get()
+    email = email_entry.get()
+    password = password_entry.get()
+    
+    print(f"{website} | {email} | {password}")
+
+    with open("data.txt", "a") as data_file:
+        data_file.write(f"{website} | {email} | {password}")
 # ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
