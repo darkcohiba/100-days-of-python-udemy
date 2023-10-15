@@ -1,11 +1,34 @@
 from tkinter import *
 from tkinter import messagebox
+import random
+
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+           'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+           'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 def generate_password():
-    pass
+    nr_letters = random.randint(8, 10)
+    nr_symbols = random.randint(2, 4)
+    nr_numbers = random.randint(2, 4)
+
+    password = ""
+    for x in range(1, nr_letters + 1):
+        password += random.choice(letters)
+    for x in range(1, nr_symbols + 1):
+        password += random.choice(symbols)
+    for x in range(1, nr_numbers + 1):
+        password += random.choice(numbers)
+    password = list(password)
+    random.shuffle(password)
+    print("".join(password))
+    password_entry.delete(0, END)
+    password_entry.insert(0, "".join(password))
+
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
@@ -17,7 +40,8 @@ def save():
 
     if website and password and email:
 
-        accept = messagebox.askokcancel(title=website, message=f"These entered details: \nEmail:{email}\nPassword: {password}\nIs it ok to save?")
+        accept = messagebox.askokcancel(title=website,
+                                        message=f"These entered details: \nEmail:{email}\nPassword: {password}\nIs it ok to save?")
 
         if accept:
             with open("data.txt", "a") as data_file:
@@ -27,6 +51,8 @@ def save():
         password_entry.delete(0, END)
     else:
         messagebox.showerror(title="Empty Fields", message="All fields are required")
+
+
 # ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
@@ -62,7 +88,8 @@ password_entry = Entry(width=21, fg="black", bg="white", highlightthickness=0, h
 password_entry.grid(row=3, column=1)
 
 # buttons
-generate_password_button = Button(text="Generate Password", highlightthickness=0, highlightbackground="white")
+generate_password_button = Button(text="Generate Password", highlightthickness=0, highlightbackground="white",
+                                  command=generate_password)
 generate_password_button.grid(row=3, column=2)
 
 add_button = Button(text="Add", width=36, highlightthickness=0, highlightbackground="white", command=save)
