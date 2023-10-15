@@ -12,11 +12,18 @@ def save():
 
     print(f"{website} | {email} | {password}")
 
-    with open("data.txt", "a") as data_file:
-        data_file.write(f"{website} | {email} | {password}\n")
+    if website and password and email:
+
+        accept = messagebox.askokcancel(title=website, message=f"These entered details: \nEmail:{email}\nPassword: {password}\nIs it ok to save?")
+
+        if accept:
+            with open("data.txt", "a") as data_file:
+                data_file.write(f"{website} | {email} | {password}\n")
         website_entry.delete(0, END)
         email_entry.delete(0, END)
         password_entry.delete(0, END)
+    else:
+        messagebox.showerror(title="Empty Fields", message="All fields are required")
 # ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
