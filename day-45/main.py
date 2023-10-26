@@ -27,8 +27,9 @@ soup = BeautifulSoup(contents, "html.parser")
 # print(heading)
 
 # all the matching items
-company_url = soup.select(selector="em")
+# company_url = soup.select(selector="em")
 # get the first
 # company_url = soup.select_one(selector="p a")
-print(company_url)
+# print(company_url)
+
 
