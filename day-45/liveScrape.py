@@ -6,4 +6,16 @@ response = requests.get("https://news.ycombinator.com/")
 web_page = response.text
 
 soup = BeautifulSoup(web_page, "html.parser")
-print(soup.title)
+# finding the first article
+# article_title = soup.find(name='a', rel='noreferrer').string
+# article_link = soup.find(name='a', rel='noreferrer').get('href')
+# article_upvote = soup.find(name='span', class_='score').string
+# print(f"title: {article_title}\n"
+#       f"link: {article_link}\n"
+#       f"votes: {article_upvote}")
+
+
+
+# doing all the articles
+articles = soup.findAll(name='a', rel='noreferrer')
+print(articles)
