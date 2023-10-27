@@ -15,10 +15,9 @@ soup = BeautifulSoup(web_page, "html.parser")
 #       f"votes: {article_upvote}")
 
 
-
 # doing all the articles
 articles = soup.select('.titleline > a:first-child')
-print(articles)
+# print(articles)
 articles_upvotes = [int(score.string.split(' ')[0]) for score in soup.find_all(name='span', class_='score')]
 article_list = []
 
@@ -31,7 +30,8 @@ for index, article in enumerate(articles):
     article_list.append(art_obj)
 
 
-print(article_list)
+# print(article_list)
 sorted_article_list = sorted(article_list, key=lambda x: x['upvotes'], reverse=True)
 print(sorted_article_list)
-print(articles_upvotes)
+# print(articles_upvotes)
+
