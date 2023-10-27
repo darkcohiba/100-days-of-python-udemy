@@ -11,3 +11,10 @@ soup = BeautifulSoup(web_page, "html.parser")
 # print(soup.prettify())
 
 
+movies = soup.select('.article-title-description__text .title')
+movie_list = []
+for movie in movies:
+    movie_list.append(movie.string)
+
+
+print(movie_list)
