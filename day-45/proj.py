@@ -8,5 +8,6 @@ response = requests.get(url)
 web_page = response.text
 
 soup = BeautifulSoup(web_page, "html.parser")
+# print(soup.prettify())
 
-print(soup.prettify())
+

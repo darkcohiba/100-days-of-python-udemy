@@ -18,6 +18,7 @@ soup = BeautifulSoup(web_page, "html.parser")
 
 # doing all the articles
 articles = soup.select('.titleline > a:first-child')
+print(articles)
 articles_upvotes = [int(score.string.split(' ')[0]) for score in soup.find_all(name='span', class_='score')]
 article_list = []
 
