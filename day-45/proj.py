@@ -16,5 +16,5 @@ movie_list = []
 for movie in movies:
     movie_list.append(movie.string)
 
-
-print(movie_list)
+# reverse movies
+print(movie_list[::-1])
